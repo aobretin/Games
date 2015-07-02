@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Puzzle</title>
+	<meta charset="UTF-8" />	
+	<link rel="stylesheet" type="text/css" href="css/puzzle.css">
+</head>
+<body>
+	<div class="overlay">
+		<h2 class="succes">Congratz, puzzle done!!<br/> Press here to refresh page</h2>
+		<h2 class="fail">No more moves!!<br/> Press here to refresh page</h2>
+	</div>
+	<div class="moves"></div>
+	<div class="container">
+		<h1 class="page-title">make your own puzzle</h1>
+		<div id="piece-preview"></div>
+		<input type="text" id="image-src" placeholder="Enter your image name here ( only 400px X 500px ) // ex: link to image or local (.jpg, .png)" />
+		<span class="input-error">Empty field or wrong image format</span>
+		<div class="puzzle-boards-holder">
+			<div id="puzzle-image"></div>
+			<div id="pieces-holder"></div>
+		</div>
+	</div>
+	<div class="buttons-holder">
+		<button id="mix" onclick="puzzle.mixPuzzle()">Mix me</button>
+		<button id="solve" onclick="puzzle.solvePuzzle()">Solve me</button>
+		<button id="refresh" onclick="window.location.href = '';">Refresh page</button>
+		<button id="show_clue" onclick="puzzle.showClue()">Show Clue</button>
+	</div>
+
+	<script type="text/javascript" src="js/puzzle.js"></script>
+</body>
+</html>

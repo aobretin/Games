@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<title>A multiplayer game built using HTML5 canvas and WebSockets</title>
+		<meta charset="utf-8">
+		
+		<link rel="stylesheet" href="style/reset.css">
+		<link rel="stylesheet" href="style/game.css">
+	</head>
+	
+	<body>
+		<canvas id="gameCanvas"></canvas>
+<!-- Embed the Socket.IO script that is generated automatically by the Node.js server by adding the following line after the canvas element: -->
+		<script src="http://localhost:8000/socket.io/socket.io.js"></script>
+		<script src="js/requestAnimationFrame.js"></script>
+		<script src="js/Keys.js"></script>
+		<script src="js/Player.js"></script>
+		<script src="js/game.js"></script>
+		<script>
+			// Initialise the game
+			init();
+			animate();
+		</script>
+	</body>
+</html>

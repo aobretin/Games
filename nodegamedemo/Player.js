@@ -1,0 +1,32 @@
+// Before we can move on you need to create the Player class on the server. It is much like the Player class on the client
+var Player = function(startX, startY) {
+	var x = startX,
+		y = startY,
+		id;
+
+	var getX = function() {
+		return x;
+	};
+
+	var getY = function() {
+		return y;
+	};
+
+	var setX = function(newX) {
+		x = newX;
+	};
+
+	var setY = function(newY) {
+		y = newY;
+	};
+
+	return {
+		getX: getX,
+		getY: getY,
+		setX: setX,
+		setY: setY,
+		id: id
+	}
+};
+
+exports.Player = Player;

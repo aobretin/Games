@@ -1,0 +1,120 @@
+body {
+	margin: 0;
+	overflow: hidden;
+	background: url(../images/ice.png);
+} 
+
+#score {
+	float: right;
+	font: 30px Georgia;
+	color: red;
+	margin: 15px;
+}
+
+#life {
+	float: right;
+	font: 30px Georgia;
+	color: green;
+	font-weight: bold;
+	margin: 15px;
+	padding-left: 50px;
+	background: url(../images/heart.png) no-repeat left;
+}
+
+.blink {
+	-webkit-animation: heart 1s infinite;
+	animation: heart 1s infinite;
+}
+
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	z-index: 99;
+	text-align: center;
+}
+
+.overlay h1 {
+	font: 90px Georgia;
+	color: red;
+	text-transform: uppercase;
+	text-shadow: 5px 5px 10px #000;
+}
+
+.overlay button {
+	display: inline-block;
+	background: url(../images/button.png) no-repeat center;
+	border: none;
+	font: 35px Georgia;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-style: italic;
+	background-size: 100%;
+	width: 398px;
+	height: 170px;
+	overflow: hidden;
+	cursor: pointer;
+	margin-top: 15%;
+	text-shadow: 5px 5px 10px #000;
+	transition: 0.2s;
+}
+
+.overlay button:hover {
+	transform: scale(1.1);
+}
+
+.overlay button:focus {
+	outline: none;
+}
+
+#restart {
+	display: none;
+}
+
+#final-score {
+	font: 30px Georgia;
+	color: red;
+	margin-top: 20px;
+}
+#hit-overlay {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(231, 100, 95, 0.4);
+}
+@-webkit-keyframes heart {
+	0% {opacity: 1;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes heart {
+	0% {opacity: 1;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+#sound_toggle {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 999;
+	padding: 20px;
+	font: 25px Georgia;
+	font-weight: bold;
+	text-align: center;
+	color: red;
+	border: 1px solid red;
+	border-radius: 10px;
+	background: rgba(231, 100, 95, 0.4);
+	text-shadow: 5px 5px 10px #000;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#sound_toggle:hover {
+	background: rgba(231, 100, 95, 0.8);
+}

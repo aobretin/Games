@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Space Invaders</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+<div class="sounds">
+	<audio id="shuttleFire" src="sounds/laser1.wav" preload="auto"></audio>
+	<audio id="alienFire" src="sounds/laser2.wav" preload="auto"></audio>
+	<audio id="alienEx" src="sounds/boom2.wav" preload="auto"></audio>
+	<audio id="shuttleEx" src="sounds/boom8.wav" preload="auto"></audio>
+	<audio id="backMusic" src="sounds/GalacticTemple.ogg" preload="auto"></audio>
+</div>
+<div id="start-overlay">
+	<h1><a href=" ">Space Invaders</a></h1>
+	<div id="buttons-holder">
+		<button id="start" onclick="spaceInvaders.init()">start</button>
+		<button id="soundToggle" class="sound-off" onclick="">Sound: Off</button>
+		<button id="highscore" onclick="playerInfo()">highscores</button>
+		<button id="close" onclick="window.close()">Close game</button>
+	</div>
+	<div id="highscore-holder">
+		<div id="title-bar">
+			<span>Name:</span>
+			<span>Wave:</span>
+			<span>Score:</span>
+		</div>
+	</div>
+</div>
+<div id="player-info">
+	<span id="lives">Lives: 3</span>
+	<span id="score">Score: 0</span>
+	<span id="wave-info"></span>
+</div>
+<div class="background-space"></div>
+<div id="overlay">
+	<h1>
+		You lose
+	</h1>
+</div>
+<div id="wave-message"></div>
+<script type="text/javascript" src="js/space.js"></script>
+<script type="text/javascript" src="js/highscore.js"></script>
+</body>
+</html>

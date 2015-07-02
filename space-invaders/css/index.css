@@ -1,0 +1,227 @@
+@import url(http://fonts.googleapis.com/css?family=Chewy);
+
+html {
+	font-size: 16px;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	overflow: hidden;
+	font: 14px Chewy, Georgia;
+}
+
+body *:focus {
+	outline: none;
+}
+
+a {
+	color: #fff;
+	display: block;
+}
+
+@-webkit-keyframes fontResize {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes fontResize {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+#start-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #000 url(../images/stars-back.gif);
+	z-index: 99999;
+}
+
+#start-overlay h1 {
+	color: #fff;
+	font-size: 90px;
+	font-style: italic;
+	text-decoration: underline;
+	text-align: center;
+	letter-spacing: 3px;
+	-webkit-animation: 1.5s fontResize;
+	animation: 1.5s fontResize;
+}
+
+#start-overlay button {
+	display: block;
+	margin: 0 auto 10px;
+	width: 300px;
+	height: 100px;
+	background: url(../images/button.png) no-repeat center;
+	background-size: 100% 100%;
+	border: none;
+	color: #fff;
+	font: 30px Chewy;
+	text-transform: uppercase;
+	cursor: pointer;
+	letter-spacing: 5px;
+	line-height: 100px;
+}
+
+#start-overlay button:hover,
+#start-overlay a:hover {
+	-webkit-animation: 1.5s infinite fontResize;
+	animation: 1.5s infinite fontResize;
+}
+
+#start-overlay button.disabled {
+	opacity: 0.7;
+	-webkit-animation: none;
+	animation: none;
+}
+
+#start-overlay button#close {
+	margin-top: 50px;
+}
+
+#start-overlay button:last-child {
+	margin-bottom: 0;
+}
+
+.background-space {
+	position: absolute;
+	transition: background-image 1s;
+	background: url(../images/space-back-1.png);
+}
+
+#shuttle {
+	background: url(../images/bgbattleship.png) no-repeat center;
+	background-size: 100px 100px;
+}
+
+.exhaust {
+	width: 18px;
+	height: 35px;
+	bottom: -15px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background: url(../images/exhaust.gif) no-repeat center;
+}
+
+.bullet,
+.alien-bullet {
+	width: 15px;
+	height: 25px;
+	background: url(../images/shuttle-beam.png) no-repeat center;
+}
+
+.alien-bullet {
+	background: url(../images/enemy-beam.png) no-repeat center;
+}
+
+#overlay {
+	opacity: 0;
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 99;
+	transition: 1s;
+}
+
+#overlay h1 {
+	text-align: center;
+	font-size: 85px;
+	color: #fff;
+	text-shadow: 0 0 6px #000;
+	text-transform: uppercase;
+	margin-top: 25%;
+}
+
+#player-info {
+	width: 100%;
+	z-index: 9999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	color: #fff;
+	font-size: 30px;
+	box-sizing: border-box;
+}
+
+#player-info span:first-child {
+	margin-right: 50px;
+}
+
+#player-info span:last-child {
+	float: right;
+}
+
+#wave-message {
+	display: none;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	font-size: 60px;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-top: -35px;
+	color: #fff;
+	z-index: 9999;
+	-webkit-animation: fontResize 1s infinite;
+	animation: fontResize 1s infinite;
+}
+
+#highscore-holder {
+	display: none;
+	width: 600px;
+	min-height: 300px;
+	margin: 50px auto;
+	font-size: 35px;
+	color: #fff;
+}
+
+#highscore-holder #title-bar {
+	border-bottom: 2px solid #fff;
+	margin-bottom: 30px;
+}
+
+#highscore-holder p {
+	text-align: center;
+}
+
+#highscore-holder span {
+	margin-left: 170px;
+	width: 78px;
+	display: inline-block;
+	text-align: center;
+}
+
+#highscore-holder span:first-child {
+	margin-left: 0;
+}
+
+
+
+
+

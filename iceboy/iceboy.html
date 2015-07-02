@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ice Boy</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/iceboy.css">
+</head>
+<body>
+	<audio id="rockHit" src="sounds/hit1.mp3" preload="auto"></audio>
+	<audio id="die" src="sounds/die1.mp3" preload="auto"></audio>
+	<audio id="runSound" src="sounds/run_sound.ogg" preload="auto"></audio>
+	<audio id="backgroundMusic" src="sounds/background_music.ogg" preload="auto"></audio>
+
+	<div id="hit-overlay"></div>
+	<div class="overlay">
+		<h1>ice boy</h1>
+		<button class="function-btn" onclick="cube.init()">Start</button>
+	</div>
+	<div id="restart" class="overlay">
+		<div id="final-score"></div>
+		<button class="function-btn" onclick="cube.destroy()">Restart</button>
+	</div>
+	<img style="display: none" id="run" src="images/run.gif">
+	<img style="display: none" id="run-reverse" src="images/run-reverse.gif">
+	<img style="display: none" id="idle" src="images/idle.gif">
+	<img style="display: none" id="idle-reverse" src="images/idle-reverse.gif">
+
+	<div id="life"></div>
+	<div id="score">Score: 0</div>
+	<div onclick="toggleSounds()" id="sound_toggle">Turn sound off</div>
+	<div id="container"></div>
+
+	<script type="text/javascript" src="js/iceboy.js"></script>
+</body>
+</html>
